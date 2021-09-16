@@ -1,0 +1,17 @@
+Osoba o id nr 1 (na sztywno):
+<br>
+{{person | json}}
+<br><br>
+Osoby o imieniu ==> <input type="text" #imie> 
+<button (click)="showNames(imie.value)">POKAŻ</button>
+<br>
+{{johnList | json}}
+<br><br>
+Imię <input type="text" #newimie> Telefon <input type="text" #telefon>
+<button (click)="addPerson(newimie.value, telefon.value)">DODAJ</button>
+
+<ul>
+	<li *ngFor="let person of personList">
+		Id: {{person.id}}, Name: {{person.name}}, Number: {{person.number}}
+	</li>
+</ul>
